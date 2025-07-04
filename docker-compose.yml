@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  ai-support-agent:
+    build: .
+    ports:
+      - "8502:8502"
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - REDMINE_URL=${REDMINE_URL}
+      - REDMINE_API_KEY=${REDMINE_API_KEY}
+      - REDMINE_USERNAME=${REDMINE_USERNAME}
+      - REDMINE_PASSWORD=${REDMINE_PASSWORD}
+      - SENDPULSE_API_ID=${SENDPULSE_API_ID}
+      - SENDPULSE_API_SECRET=${SENDPULSE_API_SECRET}
+      - SENDPULSE_LIVE_CHAT_ID=${SENDPULSE_LIVE_CHAT_ID}
+      - APP_PORT=8502
+      - API_PORT=8000
+      - DEBUG_MODE=false
+    volumes:
+      - ./issues (10).csv:/app/issues (10).csv:ro
+      - ./Knowledge:/app/Knowledge:ro
+      - knowledge_data:/app/knowledge_data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8502"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  knowledge-api:
+    build: .
+    command: ["python", "src/knowledge_api.py"]
+    ports:
+      - "8000:8000"
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - API_PORT=8000
+      - DEBUG_MODE=false
+    volumes:
+      - ./Knowledge:/app/Knowledge:ro
+      - knowledge_data:/app/knowledge_data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  knowledge_data:
+    driver: local 

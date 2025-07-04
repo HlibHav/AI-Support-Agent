@@ -1,0 +1,107 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.staging
+
+# API Keys and Secrets
+config.py
+secrets.py
+credentials.json
+*.key
+*.pem
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+streamlit.log
+knowledge_build*.log
+text_knowledge_build.log
+
+# Knowledge base files (optional - include if needed)
+knowledge_vector_index.faiss
+knowledge_documents.pkl
+knowledge_word_index.json
+knowledge_phrase_index.json
+knowledge_category_index.json
+knowledge_stats.json
+knowledge_text_search.marker
+ticket_vector_index.faiss
+ticket_vector_index.pkl
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+.pytest_cache/
+
+# Data files (optional - exclude sensitive data)
+issues*.csv
+tickets*.csv
+data/
+uploads/
+
+# Database files and configurations
+database_configs/
+*.db
+*.sqlite
+*.sqlite3
+temp_*
+
+# Documentation build
+docs/_build/
+site/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+
+# SendPulse integration
+sendpulse_cache/
+chat_sessions/ 
