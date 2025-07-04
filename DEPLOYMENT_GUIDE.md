@@ -86,7 +86,7 @@ REDMINE_API_KEY=your_redmine_api_key_here
 #### Step 3: Complete Configuration Example
 ```env
 # Google Gemini API Configuration
-GOOGLE_API_KEY=AIzaSyBw9q4dtbTaL5UptwM7kbsJClAV019tRB8
+GOOGLE_API_KEY=youe API key
 GEMINI_MODEL=models/gemini-1.5-flash
 
 # SendPulse Configuration
