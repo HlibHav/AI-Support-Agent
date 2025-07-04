@@ -282,7 +282,7 @@ docker-compose exec ai-support-agent env | grep API_KEY
 - **Advanced Search**: Powerful filtering and search capabilities
 - **Observability**: Built-in Phoenix integration for monitoring agent performance
 - **Ticket Management**: Detailed ticket viewer and analysis tools
-- **Knowledge Base**: RAG integration with 69 documentation files
+- **Knowledge Base**: RAG integration with documentation files
 - **Redmine Integration**: Direct connection to Redmine for ticket updates, status changes, and bulk operations
 - **Knowledge Base API**: RESTful API for managing and updating the knowledge base
 - **Bulk Operations**: Update multiple tickets at once through Redmine API
