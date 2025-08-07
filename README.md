@@ -551,7 +551,7 @@ The modular architecture allows easy extension:
 
 ## 🤝 Contributing
 
-This project demonstrates advanced AI/ML implementation with production-ready architecture. For questions about the implementation or to discuss AI product management opportunities, please reach out.
+For questions about the implementation or to discuss AI product management opportunities, please reach out.
 
 ---
 
